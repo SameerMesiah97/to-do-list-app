@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>To Do List</title>
+
+  <!--CSS-->
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="box" id="heading">
+    <h1 style="font-family: calibri;"> <%= Date %></h1>
+  </div>
+
+  <div class="box">
+    <ul>
+
+      <!-- Loop to add new items to list -->
+
+      <% for (var i = 0;  i < newListItems.length; i++) { %>
+      <div class="item">
+        <input type="checkbox">
+        <p style="font-family: calibri;"> <%= newListItems[i] %> </p>
+      </div>
+      <% } %>
+    </ul>
+
+      <!-- Add button -->
+    <form action="/" method="post">
+      <input type="text" name="newItem" placeholder="New Item" autocomplete="off" style="font-family: calibri;">
+      <button type="submit" name="button">+</button>
+    </form>
+  </div>
+
+</body>
+
+</html>
